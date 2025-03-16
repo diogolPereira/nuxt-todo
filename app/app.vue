@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { UApp } from '#components'
 import type { DropdownItem } from '#ui/types'
 
 const { loggedIn, user, clear } = useUserSession()
@@ -43,12 +44,12 @@ const items = [
 </script>
 
 <template>
-  <UContainer class="min-h-screen flex flex-col my-4">
+  <UApp class="min-h-screen flex flex-col my-4">
     <div class="mb-2 text-right">
       <UButton
         square
         variant="ghost"
-        color="black"
+        color="neutral"
         :icon="
           $colorMode.preference === 'dark' || $colorMode.preference === 'system'
             ? 'i-heroicons-moon'
@@ -70,7 +71,7 @@ const items = [
           to="/api/auth/github"
           icon="i-simple-icons-github"
           label="Login with GitHub"
-          color="black"
+          color="neutral"
           size="xs"
           external
         />
@@ -89,7 +90,7 @@ const items = [
             to="/optimistic-todos"
             icon="i-heroicons-sparkles"
             label="Optimistic Todos"
-            :color="$route.path === '/optimistic-todos' ? 'primary' : 'gray'"
+            :color="$route.path === '/optimistic-todos' ? 'primary' : 'neutral'"
             variant="ghost"
           />
           <UDropdown
@@ -97,7 +98,7 @@ const items = [
             :items="items"
           >
             <UButton
-              color="gray"
+              color="neutral"
               variant="ghost"
               trailing-icon="i-heroicons-chevron-down-20-solid"
             >
@@ -131,7 +132,7 @@ const items = [
         Twitter
       </NuxtLink>
     </footer>
-  </UContainer>
+  </UApp>
   <UNotifications />
 </template>
 
