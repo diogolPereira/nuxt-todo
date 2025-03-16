@@ -11,7 +11,7 @@
   "dependencies": {
     "@iconify-json/simple-icons": "^1.2.27",
     "@nuxt/eslint": "^1.1.0",
-    "@nuxt/ui": "^2.21.0",
+    "@nuxt/ui": "https://pkg.pr.new/@nuxt/ui@e016fde",
     "@nuxthub/core": "^0.8.17",
     "@pinia/colada": "^0.13.6",
     "@pinia/colada-nuxt": "^0.0.5",
