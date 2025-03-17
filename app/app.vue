@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { UApp } from '#components'
 import type { DropdownItem } from '#ui/types'
 
 const { loggedIn, user, clear } = useUserSession()
@@ -44,7 +43,7 @@ const items = [
 </script>
 
 <template>
-  <UApp class="min-h-screen flex flex-col my-4">
+  <UContainer class="min-h-screen flex flex-col my-4">
     <div class="mb-2 text-right">
       <UButton
         square
@@ -132,7 +131,7 @@ const items = [
         Twitter
       </NuxtLink>
     </footer>
-  </UApp>
+  </UContainer>
   <UNotifications />
 </template>
 
